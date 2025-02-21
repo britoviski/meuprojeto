@@ -12,10 +12,8 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        $produtos = Produto::all();
+        $produtos = Produto::orderBy('nome', 'ASC')->get();
         dd($produtos);
-        
-        //dd('Primeiro teste');
     }
 
     /**
